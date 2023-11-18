@@ -86,6 +86,7 @@ app.delete("/contacts/:id", (inRequest, inResponse) => __awaiter(void 0, void 0,
     try {
         const contactsWorker = new Contacts.Worker();
         yield contactsWorker.deleteContact(inRequest.params.id);
+        console.log(inRequest.params.id);
         inResponse.send("ok");
     }
     catch (inError) {

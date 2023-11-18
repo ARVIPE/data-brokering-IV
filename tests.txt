@@ -1,13 +1,13 @@
 TESTES POSSIVEIS CONTACTS:
 
 $ curl 127.0.0.1:8080/contacts
-$ curl -d "{\"_id\": 5, \"name\":\"a83481\", \"email\" : \"a83481@ualg.pt\" }" -H "Content-Type: application/json" -X POST http://localhost:8080/contacts
+$ curl -d "{\"_id\": "7", \"name\":\"rafa\", \"email\" : \"rafa@ualg.pt\" }" -H "Content-Type: application/json" -X POST http://localhost:8080/contacts
 
 export interface IContact{
     _id?:number, name: string, email: string
 }
 
-$ curl -d '{"to" : "maria@ualg.pt", "from" : "arturo@ualg.pt", "subject": "bla", "text": "bla"}' -H "Content-Type: application/json" -X POST http://localhost:8080/messages
+$ curl -d '{"to" : "a83481@ualg.pt", "from" : "a83481@ualg.pt", "subject": "bla", "text": "bla"}' -H "Content-Type: application/json" -X POST http://localhost:8080/messages
 
 axios.post('${config.serverAddress}/messages', {
     to: info, from : inFrom, subject: inSubject,

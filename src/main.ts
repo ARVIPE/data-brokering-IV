@@ -63,6 +63,7 @@ app.delete("/contacts/:id",
         try{
             const contactsWorker: Contacts.Worker = new Contacts.Worker();
             await contactsWorker.deleteContact(inRequest.params.id);
+            console.log(inRequest.params.id);
             inResponse.send("ok");
         }catch(inError){
             inResponse.send("error");
